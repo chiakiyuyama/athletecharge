@@ -178,9 +178,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         const data = await response.json();
         if (response.ok) {
-          resultEl.textContent = "送信が完了しました。数日以内にご返信いたします。";
-          resultEl.classList.add("contact-form__result--success");
           contactForm.reset();
+          window.location.href = "thanks.html";
         } else {
           resultEl.textContent = "送信に失敗しました。もう一度お試しください。";
           resultEl.classList.add("contact-form__result--error");
