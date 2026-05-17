@@ -1174,6 +1174,21 @@ a.service-card {
   border: none;
 }
 
+.contact-form__result {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.contact-form__result--success {
+  color: var(--green);
+}
+
+.contact-form__result--error {
+  color: var(--red);
+}
+
 /* Privacy link */
 .contact__privacy {
   text-align: center;

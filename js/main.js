@@ -154,4 +154,44 @@ document.addEventListener('DOMContentLoaded', () => {
       if (e.key === 'Escape' && privacyModal.classList.contains('is-open')) closeModal();
     });
   }
+
+  // ---------- Contact form (Web3Forms) ----------
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const resultEl = document.getElementById('contactResult');
+
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(contactForm);
+      formData.append("access_key", "019e7eb9-f666-4deb-ae09-fe8a44104cc0");
+
+      submitBtn.textContent = "送信中...";
+      submitBtn.disabled = true;
+      resultEl.textContent = "";
+      resultEl.className = "contact-form__result";
+
+      try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          body: formData
+        });
+        const data = await response.json();
+        if (response.ok) {
+          resultEl.textContent = "送信が完了しました。数日以内にご返信いたします。";
+          resultEl.classList.add("contact-form__result--success");
+          contactForm.reset();
+        } else {
+          resultEl.textContent = "送信に失敗しました。もう一度お試しください。";
+          resultEl.classList.add("contact-form__result--error");
+        }
+      } catch (error) {
+        resultEl.textContent = "通信エラーが発生しました。もう一度お試しください。";
+        resultEl.classList.add("contact-form__result--error");
+      } finally {
+        submitBtn.textContent = "送信する";
+        submitBtn.disabled = false;
+      }
+    });
+  }
 });
