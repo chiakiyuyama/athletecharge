@@ -1,0 +1,991 @@
+/* ========================================
+   Service Detail Pages - Stylesheet
+   ======================================== */
+
+/* ---------- Sub-page Hero ---------- */
+.subpage-hero {
+  margin-top: 72px;
+  position: relative;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.subpage-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.subpage-hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.subpage-hero__overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.subpage-hero__overlay--blue   { background: rgba(0, 173, 241, 0.75); }
+.subpage-hero__overlay--yellow { background: rgba(255, 185, 0, 0.75); }
+.subpage-hero__overlay--red    { background: rgba(255, 97, 109, 0.75); }
+.subpage-hero__overlay--green  { background: rgba(85, 192, 100, 0.75); }
+
+.subpage-hero__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subpage-hero__title {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.4;
+  margin-bottom: 8px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.subpage-hero__subtitle {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.95);
+  max-width: 600px;
+  margin: 0 auto;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* ---------- Breadcrumb ---------- */
+.breadcrumb {
+  padding: 20px 0;
+  font-size: 0.85rem;
+  color: var(--gray);
+}
+
+.breadcrumb a {
+  color: var(--blue);
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb span {
+  margin: 0 8px;
+  color: #cbd5e1;
+}
+
+/* ---------- Service Detail Content ---------- */
+.service-detail {
+  padding: 60px 0 100px;
+}
+
+/* Main content */
+.service-detail h2 {
+  font-size: 1.6rem;
+  font-weight: 900;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 3px solid;
+  margin-top: 64px;
+}
+
+.service-detail h2:first-child {
+  margin-top: 0;
+}
+
+.service-detail h2.border--blue   { border-color: var(--blue); }
+.service-detail h2.border--yellow { border-color: var(--yellow); }
+.service-detail h2.border--red    { border-color: var(--red); }
+.service-detail h2.border--green  { border-color: var(--green); }
+
+.service-detail p {
+  color: var(--gray);
+  line-height: 2;
+  margin-bottom: 20px;
+}
+
+.service-detail .lead {
+  font-size: 1.1rem;
+  color: var(--dark);
+  font-weight: 500;
+  line-height: 2;
+  margin-bottom: 48px;
+}
+
+/* Features list */
+.detail-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-bottom: 64px;
+}
+
+.detail-feature {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.detail-feature__img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  margin-bottom: 16px;
+  background: var(--gray-light);
+}
+
+.detail-feature__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.detail-feature__title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--dark);
+}
+
+.detail-feature__text {
+  font-size: 0.85rem;
+  color: var(--gray);
+  margin-bottom: 0;
+  line-height: 1.7;
+  text-align: left;
+}
+
+/* Counseling form block */
+.counseling-form-block {
+  background: #f8fafe;
+  border: 1px solid #e2eaf3;
+  border-radius: var(--radius-sm);
+  padding: 40px;
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.counseling-form-block__desc {
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: var(--dark);
+  margin-bottom: 24px;
+}
+
+.counseling-form-block__table {
+  max-width: 480px;
+  margin: 0 auto 32px;
+}
+
+.counseling-form-block__btn {
+  display: inline-block;
+  font-size: 1rem;
+  padding: 14px 40px;
+  margin-bottom: 16px;
+}
+
+.counseling-form-block__price {
+  font-size: 1.1rem;
+  color: var(--dark);
+  margin-bottom: 32px;
+}
+
+.counseling-form-block__note {
+  font-size: 0.8rem;
+  color: var(--gray);
+}
+
+/* Q&A list */
+.qa-list {
+  margin-bottom: 64px;
+}
+
+.qa-item {
+  margin-bottom: 24px;
+  border: 1px solid #e8e8e8;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.qa-item__question {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 20px 24px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--dark);
+  background: #f9f9f9;
+}
+
+.qa-item__answer {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 20px 24px;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--dark);
+}
+
+.qa-label {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #fff;
+}
+
+.qa-label--q {
+  background: var(--blue);
+}
+
+.qa-label--a {
+  background: var(--green);
+}
+
+/* Form button wrap */
+.counseling-form-btn-wrap {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 64px;
+}
+
+.counseling-form-btn-wrap__desc {
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: var(--dark);
+  margin-top: 24px;
+  margin-bottom: 0;
+}
+
+.counseling-form-btn-wrap .counseling-form-block__btn {
+  display: inline-block;
+  padding: 20px 56px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+}
+
+/* Landscape variant for feature images */
+.detail-features--landscape .detail-feature__img {
+  aspect-ratio: 16 / 9;
+  border: 1px solid #e0e0e0;
+}
+
+
+
+/* Flow / steps */
+.detail-flow {
+  margin-bottom: 64px;
+}
+
+.flow-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.flow-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 24px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.flow-step:last-child {
+  border-bottom: none;
+}
+
+.flow-step__number {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  color: var(--white);
+  flex-shrink: 0;
+}
+
+.flow-step__number--blue   { background: var(--blue); }
+.flow-step__number--yellow { background: var(--yellow); }
+.flow-step__number--red    { background: var(--red); }
+.flow-step__number--green  { background: var(--green); }
+
+.flow-step h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.flow-step p {
+  font-size: 0.9rem;
+  color: var(--gray);
+  margin-bottom: 0;
+  line-height: 1.7;
+}
+
+/* ---------- Pricing (inline) ---------- */
+.pricing-inline {
+  max-width: 600px;
+  margin-bottom: 64px;
+}
+
+.pricing-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 12px 0;
+  border-bottom: 1px dashed #e2e8f0;
+}
+
+.pricing-item:last-child {
+  border-bottom: none;
+}
+
+.pricing-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.pricing-value {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--blue);
+  white-space: nowrap;
+}
+
+.pricing-note {
+  font-size: 0.8rem;
+  color: var(--gray);
+  margin-top: 12px;
+  margin-bottom: 48px;
+  line-height: 1.6;
+}
+
+/* Menu cards */
+.menu-price-info {
+  font-size: 0.95rem;
+  color: var(--dark);
+  margin-bottom: 24px;
+  line-height: 1.7;
+}
+
+.menu-price-info strong {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: var(--blue);
+  font-size: 1.05rem;
+}
+
+.menu-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.menu-card {
+  text-align: center;
+}
+
+.menu-card__img {
+  width: 100%;
+  aspect-ratio: 300 / 200;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--gray-light);
+  margin-bottom: 12px;
+}
+
+.menu-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.menu-card__name {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.pricing-highlight {
+  background: var(--blue-light);
+  border-left: 4px solid var(--blue);
+  border-radius: var(--radius-sm);
+  padding: 16px 20px;
+  margin-top: 16px;
+  margin-bottom: 48px;
+}
+
+.pricing-highlight p {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--dark);
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+/* Pricing cards (horizontal) */
+.pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
+.pricing-card {
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: var(--white);
+}
+
+.pricing-card__img {
+  width: 100%;
+  aspect-ratio: 300 / 200;
+  overflow: hidden;
+  background: var(--gray-light);
+}
+
+.pricing-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.pricing-card__body {
+  padding: 20px;
+}
+
+.pricing-card__name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 6px;
+}
+
+.pricing-card__price {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--blue);
+  margin-bottom: 10px;
+}
+
+.pricing-card__price span {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--gray);
+}
+
+.pricing-card__desc {
+  font-size: 0.82rem;
+  color: var(--gray);
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+/* ---------- Reservation Notice ---------- */
+.reservation-notice {
+  margin-bottom: 48px;
+}
+
+.reservation-notice p {
+  font-size: 0.92rem;
+  color: #333;
+  line-height: 1.9;
+  margin-bottom: 12px;
+}
+
+.reservation-notice p:last-child {
+  margin-bottom: 0;
+}
+
+.reservation-notice__note {
+  font-size: 0.85rem !important;
+  color: var(--blue) !important;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+/* Cancel table */
+.cancel-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+.cancel-table th,
+.cancel-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.cancel-table th {
+  font-weight: 700;
+  color: var(--dark);
+  font-size: 0.82rem;
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.cancel-table td {
+  color: var(--dark);
+}
+
+.cancel-free {
+  color: var(--green);
+  font-weight: 700;
+}
+
+.cancel-half {
+  color: var(--yellow-dark, #d49700);
+  font-weight: 700;
+}
+
+.cancel-full {
+  color: var(--red);
+  font-weight: 700;
+}
+
+/* Calc example */
+.calc-example {
+  margin-top: 16px;
+  padding: 20px 24px;
+  background: var(--gray-light);
+  border-radius: var(--radius-sm);
+}
+
+.calc-example h4 {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+
+.calc-example p {
+  font-size: 0.88rem !important;
+  color: var(--dark) !important;
+  margin-bottom: 8px !important;
+  line-height: 1.7 !important;
+}
+
+.calc-example ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 12px;
+}
+
+.calc-example ul li {
+  font-size: 0.88rem;
+  color: var(--dark);
+  line-height: 1.8;
+}
+
+.calc-example__total {
+  font-size: 0.95rem !important;
+  font-weight: 500;
+  color: var(--blue) !important;
+  margin-bottom: 0 !important;
+}
+
+@media (max-width: 480px) {
+  .cancel-table th,
+  .cancel-table td {
+    padding: 10px 12px;
+    font-size: 0.82rem;
+  }
+
+  .calc-example {
+    padding: 16px 18px;
+  }
+
+  .calc-example ul li,
+  .calc-example p {
+    font-size: 0.82rem !important;
+  }
+}
+
+/* ---------- Seminar Page ---------- */
+.seminar-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 48px;
+}
+
+.seminar-gallery__item {
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--gray-light);
+}
+
+.seminar-gallery__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.seminar-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 64px;
+}
+
+.seminar-columns__col h2 {
+  font-size: 1.4rem;
+}
+
+.seminar-text-block {
+  margin-bottom: 64px;
+}
+
+.seminar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.seminar-list li {
+  position: relative;
+  padding: 12px 16px 12px 28px;
+  font-size: 0.95rem;
+  color: var(--dark);
+  line-height: 1.7;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.seminar-list li:last-child {
+  border-bottom: none;
+}
+
+.seminar-list li::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 18px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--red);
+}
+
+.seminar-text-note {
+  font-size: 0.82rem;
+  color: var(--gray);
+  margin-top: 12px;
+  line-height: 1.7;
+}
+
+.seminar-pricing-block {
+  margin-bottom: 64px;
+}
+
+.seminar-pricing-subtitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 16px;
+}
+
+.seminar-pricing-table {
+  width: 100%;
+  max-width: 480px;
+  border-collapse: collapse;
+  margin-bottom: 16px;
+}
+
+.seminar-pricing-table thead th {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--gray);
+  text-align: left;
+  padding: 10px 16px;
+  background: var(--gray-light);
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.seminar-pricing-table tbody td {
+  font-size: 0.95rem;
+  color: var(--dark);
+  padding: 14px 16px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.seminar-pricing-table__price {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem !important;
+  color: var(--blue) !important;
+}
+
+.seminar-pricing-note {
+  font-size: 0.82rem;
+  color: var(--gray);
+  line-height: 1.8;
+  margin-top: 12px;
+}
+
+/* ---------- Sub-page CTA ---------- */
+.subpage-cta {
+  text-align: center;
+  padding: 60px 0;
+  background: var(--gray-light);
+}
+
+.subpage-cta h2 {
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+.subpage-cta p {
+  color: var(--gray);
+  margin-bottom: 24px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .menu-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 320px;
+    margin: 0 auto 36px;
+  }
+
+  .menu-card__name {
+    font-size: 0.85rem;
+  }
+
+  .menu-price-info {
+    font-size: 0.88rem;
+  }
+
+  .pricing-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 320px;
+    margin: 0 auto 16px;
+  }
+
+  .pricing-card__name {
+    font-size: 0.92rem;
+  }
+
+  .pricing-card__price {
+    font-size: 1rem;
+  }
+
+  .pricing-card__desc {
+    font-size: 0.8rem;
+  }
+
+  .subpage-hero {
+    margin-top: 60px;
+    height: 200px;
+  }
+
+  .subpage-hero__title {
+    font-size: 1.4rem;
+  }
+
+  .subpage-hero__subtitle {
+    font-size: 0.85rem;
+  }
+
+  .service-detail {
+    padding: 40px 0 60px;
+  }
+
+  .service-detail h2 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+  }
+
+  .service-detail .lead {
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+  }
+
+  .detail-features {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-bottom: 36px;
+  }
+
+  .detail-feature {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .detail-feature__title {
+    font-size: 0.92rem;
+  }
+
+  .detail-feature__text {
+    font-size: 0.82rem;
+  }
+
+  .flow-step {
+    gap: 14px;
+    padding: 18px 0;
+  }
+
+  .flow-step__number {
+    width: 34px;
+    height: 34px;
+    font-size: 0.88rem;
+  }
+
+  .flow-step h4 {
+    font-size: 0.92rem;
+  }
+
+  .flow-step p {
+    font-size: 0.82rem;
+  }
+
+  .pricing-label {
+    font-size: 0.88rem;
+  }
+
+  .pricing-value {
+    font-size: 0.95rem;
+  }
+
+  .subpage-cta {
+    padding: 40px 0;
+  }
+
+  .subpage-cta h2 {
+    font-size: 1.3rem;
+  }
+
+  .subpage-cta p {
+    font-size: 0.88rem;
+  }
+
+  .breadcrumb {
+    font-size: 0.78rem;
+    padding: 14px 0;
+  }
+
+  .seminar-columns {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .seminar-columns__col h2 {
+    font-size: 1.3rem;
+  }
+
+  .seminar-columns__col:first-child {
+    margin-bottom: 48px;
+  }
+
+  .seminar-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 36px;
+  }
+
+  .seminar-list li {
+    font-size: 0.88rem;
+    padding: 10px 14px 10px 24px;
+  }
+
+  .seminar-list li::before {
+    top: 16px;
+    width: 7px;
+    height: 7px;
+  }
+
+  .seminar-pricing-table {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .subpage-hero {
+    height: 170px;
+  }
+
+  .subpage-hero__title {
+    font-size: 1.2rem;
+  }
+
+  .subpage-hero__subtitle {
+    font-size: 0.8rem;
+  }
+
+  .service-detail h2 {
+    font-size: 1.15rem;
+  }
+
+  .service-detail .lead {
+    font-size: 0.88rem;
+  }
+
+  .service-detail p {
+    font-size: 0.85rem;
+  }
+
+  .detail-feature h4 {
+    font-size: 0.85rem;
+  }
+
+  .subpage-cta h2 {
+    font-size: 1.15rem;
+  }
+
+  .seminar-gallery {
+    gap: 8px;
+    margin-bottom: 28px;
+  }
+
+  .seminar-list li {
+    font-size: 0.82rem;
+    padding: 8px 12px 8px 22px;
+  }
+
+  .seminar-pricing-table thead th {
+    font-size: 0.78rem;
+    padding: 8px 12px;
+  }
+
+  .seminar-pricing-table tbody td {
+    font-size: 0.88rem;
+    padding: 12px;
+  }
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>決済完了 | スポーツ栄養サポート</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --blue: #00adf1;
+      --blue-light: #e8f7fe;
+      --dark: #0f172a;
+      --gray: #64748b;
+      --white: #ffffff;
+    }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      color: var(--dark);
+      background: #f8fafc;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .thanks {
+      text-align: center;
+      max-width: 480px;
+      width: 100%;
+    }
+
+    .thanks__icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: var(--blue-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 28px;
+      animation: popIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
+    }
+
+    .thanks__icon svg {
+      width: 36px;
+      height: 36px;
+      color: var(--blue);
+    }
+
+    .thanks__title {
+      font-size: 1.5rem;
+      font-weight: 900;
+      margin-bottom: 12px;
+      opacity: 0;
+      animation: fadeUp 0.6s ease-out 0.4s forwards;
+    }
+
+    .thanks__message {
+      font-size: 0.95rem;
+      color: var(--gray);
+      line-height: 1.9;
+      margin-bottom: 36px;
+      opacity: 0;
+      animation: fadeUp 0.6s ease-out 0.6s forwards;
+    }
+
+    .thanks__btn {
+      display: inline-block;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--white);
+      background: linear-gradient(135deg, var(--blue), #0090c8);
+      padding: 14px 36px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      opacity: 0;
+      animation: fadeUp 0.6s ease-out 0.8s forwards;
+    }
+
+    .thanks__btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 173, 241, 0.3);
+    }
+
+    @keyframes popIn {
+      0%   { opacity: 0; transform: scale(0.5); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes fadeUp {
+      0%   { opacity: 0; transform: translateY(16px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 480px) {
+      .thanks__title { font-size: 1.25rem; }
+      .thanks__message { font-size: 0.88rem; }
+      .thanks__btn { font-size: 0.85rem; padding: 12px 28px; }
+      .thanks__icon { width: 60px; height: 60px; }
+      .thanks__icon svg { width: 30px; height: 30px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="thanks">
+    <div class="thanks__icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20 6 9 17 4 12"></polyline>
+      </svg>
+    </div>
+    <h1 class="thanks__title">決済が完了しました</h1>
+    <p class="thanks__message">
+      お支払いいただきありがとうございます。<br>
+      ご利用内容の確認メールをお送りしましたので、<br>
+      ご確認ください。
+    </p>
+    <a href="index.html" class="thanks__btn">トップページへ戻る</a>
+  </div>
+</body>
+</html>
