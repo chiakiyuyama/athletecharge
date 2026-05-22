@@ -1798,7 +1798,7 @@ a.service-card {
   }
 
   .hero__desc br {
-    display: none;
+    display: inline;
   }
 
   .hero__colors {
