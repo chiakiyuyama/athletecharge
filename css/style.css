@@ -404,7 +404,7 @@ ul {
 
 .hero__desc {
   font-size: 0.95rem;
-  color: var(--dark);
+  color: #1a202c;
   line-height: 2;
   margin-bottom: 28px;
   text-shadow:
@@ -415,7 +415,10 @@ ul {
      0   -1px 0 var(--white),
      0    1px 0 var(--white),
     -1px  0   0 var(--white),
-     1px  0   0 var(--white);
+     1px  0   0 var(--white),
+     0    0  6px rgba(255, 255, 255, 0.9),
+     0    0 12px rgba(255, 255, 255, 0.7),
+     0    0 20px rgba(255, 255, 255, 0.5);
   opacity: 0;
   animation: heroFadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.5s forwards;
 }
@@ -1609,7 +1612,7 @@ a.service-card {
   }
 
   .hero__desc {
-    font-size: 0.78rem;
+    font-size: 0.85rem;
     line-height: 1.8;
     margin-bottom: 20px;
   }
@@ -1789,7 +1792,7 @@ a.service-card {
   }
 
   .hero__desc {
-    font-size: 0.68rem;
+    font-size: 0.78rem;
     line-height: 1.7;
     margin-bottom: 14px;
   }

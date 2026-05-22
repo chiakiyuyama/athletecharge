@@ -860,6 +860,18 @@
   .flow-step {
     gap: 14px;
     padding: 18px 0;
+    flex-wrap: wrap;
+  }
+
+  .flow-step h3,
+  .flow-step h4 {
+    width: calc(100% - 48px);
+  }
+
+  .flow-step p {
+    width: 100%;
+    padding-left: 48px;
+    margin-top: -4px;
   }
 
   .flow-step__number {
@@ -874,6 +886,11 @@
 
   .flow-step p {
     font-size: 0.82rem;
+    line-height: 1.7;
+  }
+
+  .detail-flow h2 {
+    font-size: 1.3rem;
   }
 
   .pricing-label {
@@ -967,6 +984,32 @@
 
   .subpage-cta h2 {
     font-size: 1.15rem;
+  }
+
+  .flow-step {
+    gap: 10px;
+    padding: 14px 0;
+    flex-wrap: wrap;
+  }
+
+  .flow-step__number {
+    width: 30px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
+
+  .flow-step h3,
+  .flow-step h4 {
+    font-size: 0.85rem;
+    width: calc(100% - 42px);
+  }
+
+  .flow-step p {
+    font-size: 0.78rem;
+    line-height: 1.7;
+    width: 100%;
+    padding-left: 42px;
+    margin-top: -2px;
   }
 
   .seminar-gallery {
