@@ -499,6 +499,12 @@ ul {
   border-radius: 2px;
 }
 
+.about__text {
+  font-size: 1rem;
+  color: var(--gray);
+  line-height: 2;
+}
+
 .about__desc {
   color: var(--gray);
   line-height: 2;
@@ -1627,6 +1633,10 @@ a.service-card {
     font-size: 1.3rem;
   }
 
+  .about__text {
+    font-size: 0.85rem;
+  }
+
   .about__desc {
     font-size: 0.88rem;
   }
@@ -1831,6 +1841,10 @@ a.service-card {
 
   .about__headline {
     font-size: 1.1rem;
+  }
+
+  .about__text {
+    font-size: 0.78rem;
   }
 
   .about__desc {
